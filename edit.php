@@ -41,7 +41,7 @@ if (!empty($_GET['P_id'])) {
 
 // Redirect to list page if invalid request submitted 
 if (empty($userData || $postData)) {
-    header("Location: index.php");
+    header("Location: dashboard.php");
     exit;
 }
 
@@ -59,7 +59,7 @@ if (!empty($sessData['sendData'])) {
 
         <!-- Back link -->
         <div class="float-right">
-            <a href="index.php" class="btn btn-success"><i class="back"></i> Back</a>
+            <a href="dashboard.php" class="btn btn-success"><i class="back"></i> Back</a>
         </div>
     </div>
 
@@ -95,7 +95,7 @@ if (!empty($sessData['sendData'])) {
 
         <!-- Back link -->
         <div class="float-right">
-            <a href="index.php" class="btn btn-success"><i class="back"></i> Back</a>
+            <a href="dashboard.php" class="btn btn-success"><i class="back"></i> Back</a>
         </div>
     </div>
 

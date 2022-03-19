@@ -1,0 +1,664 @@
+/* The Bootstrap 3 grid system has four classes:
+
+xs (for phones - screens less than 768px wide)
+sm (for tablets - screens equal to or greater than 768px wide)
+md (for small laptops - screens equal to or greater than 992px wide)
+lg (for laptops and desktops - screens equal to or greater than 1200px wide)
+//////////////////////////////////////////////////////////////
+ The Bootstrap 4 grid system has five classes:
+
+.col- (extra small devices - screen width less than 576px)
+.col-sm- (small devices - screen width equal to or greater than 576px)
+.col-md- (medium devices - screen width equal to or greater than 768px)
+.col-lg- (large devices - screen width equal to or greater than 992px)
+.col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+
+  smart phones & tablets*/
+
+@media (min-width:0px) and (max-width:575px) {
+    .navbar-brand img {
+        padding: 2px;
+        margin-right: 5px;
+        height: 90px;
+        width: 180px;
+        overflow: auto;
+    }
+    .navbar-nav {
+        border-bottom: hidden;
+    }
+    .lead {
+        font-size: 1.00rem;
+        font-weight: 400;
+    }
+    .btn {
+        margin-right: 1px;
+        margin-left: 1px;
+        color: #6A164A;
+        padding: 0.375rem 0.50rem;
+        font-size: 1rem;
+        line-height: 1.0;
+    }
+    #slider {
+        font-size: 12px;
+        margin-left: 66px;
+    }
+    #slider .seeall {
+        font-size: 10px;
+        color: #3C102D;
+        margin-top: -22px;
+        margin-left: 10px;
+        padding-left: 5px;
+        padding-right: 200px;
+        display: block;
+        width: auto;
+    }
+    #slider h4 {
+        font-size: 14px;
+        padding-left: 190px;
+        width: auto;
+    }
+    .carousel-indicators {
+        padding-left: 36px;
+        bottom: -30px;
+    }
+    #foot {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    /*important paddings 0for container take full width&color*/
+    footer {
+        max-width: 100%;
+        height: 50%;
+        font-weight: 200;
+        font-size: 14px;
+        padding-top: 2rem!important;
+        padding-bottom: 2rem!important;
+        margin-right: -10px;
+    }
+    footer img {
+        height: 67px;
+        width: 110px;
+        margin-right: 50px;
+        float: right;
+    }
+    small {
+        margin-right: -40px;
+        margin-top: 80px;
+        display: inline-block;
+    }
+    footer h5 {
+        font-weight: 8px;
+        line-height: 1.0;
+        color: #f4f5f7;
+        text-align: center;
+        margin-right: 1px;
+        margin-top: 2px;
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    footer ul {
+        padding-inline-start: 1px;
+        margin-block-start: 2px;
+        margin-block-end: 2px;
+    }
+    footer li a {
+        margin-right: 5px;
+        text-align: center;
+    }
+    footer .callUs {
+        padding: 2px;
+        width: 25px;
+        height: 25px;
+    }
+    footer span {
+        text-align: center;
+        margin-top: 2px;
+        font-size: 12px;
+        color: #f4f5f7;
+    }
+    .grad {
+        width: 395px;
+        margin-right: 50px;
+        border-width: medium;
+    }
+    #edu h4,
+    #track h4 {
+        padding-left: 230px;
+        font-size: 12px;
+        MARGIN-LEFT: 7px;
+    }
+    #track h5 a,
+    #edu h5 a {
+        font-size: 10px;
+        padding-right: 190px;
+    }
+    /*dashbord pages*/
+    #search-btnd {
+        margin-top: 20px;
+        /* margin-left: 106px; */
+        margin-right: 115px;
+        padding-left: 8px;
+        display: inline-block;
+    }
+    #studentmenu a {
+        text-decoration: none;
+    }
+    #profileimg img {
+        margin-top: -45px;
+        height: 80px;
+        width: 80px;
+    }
+    .profile img {
+        height: 50px;
+        width: 50px;
+        margin-bottom: 0px;
+        margin-top: 5px;
+    }
+    .profile a {
+        text-decoration: none;
+    }
+    #icon {
+        margin-top: 45px;
+        float: right;
+        margin-right: -25px;
+        font-size: 12px;
+    }
+    /* #content {
+        margin-top: 50px;
+    } */
+    .menu ul li {
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    .menu ul li :hover {
+        font-size: 16px;
+    }
+    .recei-mess {
+        border-radius: 8px;
+        padding: 5px 10px;
+        max-width: 390px;
+        font-size: 12px;
+    }
+    .send-mess {
+        border-radius: 8px;
+        padding: 5px 10px;
+        max-width: 390px;
+        font-size: 12px;
+    }
+    .au-chat-textfield {
+        padding: 8px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .au-chat__content2 .recei-mess {
+        max-width: 152px;
+    }
+    .switch {
+        position: absolute;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: -15px;
+        /* float: left; */
+        clear: both;
+        right: 100px;
+        direction: rtl;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 25px;
+        left: 1px;
+        right: 30px;
+        bottom: 0;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    section.hero-home {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px) {
+    section.hero-home {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-nav {
+        border-bottom: hidden;
+    }
+    .navbar-brand img {
+        padding: 2px;
+        margin-right: 5px;
+        height: 90px;
+        width: 180px;
+        overflow: auto;
+    }
+    .lead {
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .btn {
+        margin-right: 1px;
+        margin-left: 1px;
+        color: #6A164A;
+        padding: 0.375rem 0.50rem;
+        font-size: 1rem;
+        line-height: 1.0;
+    }
+    #slider {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    #slider h4 {
+        padding-top: 0px;
+        left: 0px;
+        right: 20px;
+        font-size: 20px;
+        padding-left: 415px;
+        width: auto;
+    }
+    #slider .seeall {
+        font-size: 16px;
+        color: #3C102D;
+        margin-top: -28px;
+        margin-left: 10px;
+        padding-left: 5px;
+        padding-right: 436px;
+        display: block;
+        width: auto;
+    }
+    #murabaat {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 100px;
+    }
+    #murabaat img {
+        margin-top: 0px;
+        height: 150px;
+        width: 150px;
+        margin-left: -180px;
+    }
+    #murabaat p {
+        font-size: 18px;
+        color: #3C102D;
+        text-align: center;
+        padding-left: 1px;
+        padding-right: 131px;
+        padding-top: 50px;
+    }
+    small {
+        margin-right: 60px;
+        margin-top: -19px;
+    }
+    footer img {
+        height: 80px;
+        width: 150px;
+        margin-right: 20px;
+        float: none;
+        margin-left: 5px;
+    }
+    #edu h4 {
+        padding-left: 310px;
+        font-size: 20px;
+        MARGIN-LEFT: -22px;
+    }
+    #edu h5 a {
+        padding-right: 300px;
+        font-size: 12px;
+    }
+    #track h5 a {
+        font-size: 12px;
+        padding-right: 300px;
+    }
+    #track h4 {
+        font-size: 20px;
+        padding-left: 240px;
+    }
+    #search-btnd {
+        margin-top: 20px;
+        /* margin-left: 106px; */
+        margin-right: 115px;
+        padding-left: 8px;
+        display: inline-block;
+    }
+    #profileimg img {
+        margin-top: -75px;
+        height: 120px;
+        width: 120px;
+    }
+    .profile img {
+        height: 80px;
+        width: 80px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .profile img:hover {
+        background-color: #ffffff;
+        border-radius: 15px;
+    }
+    #icon {
+        margin-top: 45px;
+        float: right;
+        margin-right: -25px;
+        font-size: 14px;
+    }
+    .recei-mess {
+        border-radius: 8px;
+        padding: 5px 10px;
+        max-width: 390px;
+        font-size: 12px;
+    }
+    .send-mess {
+        border-radius: 8px;
+        padding: 5px 10px;
+        max-width: 390px;
+        font-size: 12px;
+    }
+    .au-chat-textfield {
+        padding: 8px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .au-chat__content2 .recei-mess {
+        max-width: 152px;
+    }
+}
+
+
+/*mediam screen has problem from size 768_772  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:768px) and (max-width:991px) {
+    .material-icons {
+        margin-right: -16px;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #a7264d;
+        width: 85px;
+    }
+    .navbar-brand img {
+        margin-right: -15px;
+        height: 50px;
+        width: 100px;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #a7264d;
+        width: 100px;
+    }
+    /*
+  .nav-item {
+     padding-left:1px;
+     padding-right:0px;
+     margin-left:1px;
+     width:auto;
+     font-size:10px;
+   }
+
+    .nav-link{    width: 10px;    padding-right: 5px;    padding-left: 5px;}
+    .dropdown-menu {
+    min-width: 1.0rem;
+    padding: 0.5rem 0;
+    margin: 0.1rem 0 0;
+    font-size: 12px;
+  }
+
+.navbar-expand-md .navbar-nav .dropdown-menu {
+
+    position:inherit;
+}
+    li.nav-item.dropdown.show {    margin-right: 1px;  margin-left: 29px;  }
+  .navbar-light .navbar-nav .nav-link {color: #a7264d; width: 140px;}
+  .navbar-brand img { padding: 2px; margin-right:5px;height:80px; width:90px;  overflow:auto;}
+
+*/
+    .lead {
+        font-size: 1.0rem;
+        font-weight: 300;
+    }
+    h4,
+    .h4 {
+        font-size: 1.0rem;
+    }
+    .btn {
+        margin-right: 1px;
+        margin-left: 1px;
+        color: #6A164A;
+        padding: 0.375rem 0.50rem;
+        font-size: 1.0rem;
+        line-height: 1.0;
+    }
+    #slider {
+        font-size: 18px;
+        margin-left: 80px;
+        margin-right: 150px;
+    }
+    #slider h4 {
+        padding-top: 0px;
+        left: 0px;
+        right: 20px;
+        font-size: 20px;
+        padding-left: 627px;
+        width: auto;
+    }
+    .carousel-control-next-icon {
+        margin-right: 30px;
+    }
+    #slider .seeall {
+        margin-left: 1px;
+        margin-top: -28px;
+        padding-left: 9px;
+        padding-right: 580px;
+        display: block;
+        font-size: 18px;
+    }
+    /*/////////////////////////////*/
+    footer img {
+        height: 80px;
+        width: 150px;
+        margin-right: 2px;
+        float: right;
+        margin-left: 5px;
+    }
+    #profileimg img {
+        margin-top: -75px;
+        height: 100px;
+        width: 100px;
+    }
+    .profile img {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    .profile img:hover {
+        background-color: #ffffff;
+        border-radius: 15px;
+    }
+    #icon {
+        margin-top: 10px;
+        float: right;
+        margin-right: -28px;
+    }
+    .menu ul li {
+        margin-right: 35px;
+        font-size: 16px;
+    }
+    .menu ul li :hover {
+        font-size: 20px;
+    }
+}
+
+
+/*larg screen*/
+
+@media (min-width:992px) and (max-width:1199px) {
+    .lead {
+        font-size: 1.40rem;
+        font-weight: 300;
+    }
+    .grad {
+        width: 900px;
+        margin-right: 75px;
+        margin-left: 150px;
+    }
+    #slider h4 {
+        padding-left: 815px;
+    }
+    #slider .seeall {
+        margin-left: 1px;
+        margin-top: -28px;
+        padding-left: 5px;
+        padding-right: 835px;
+        display: block;
+        font-size: 18px;
+    }
+    .btn {
+        margin-right: 1px;
+        margin-left: 1px;
+        color: #6A164A;
+        padding: 0.375rem 0.50rem;
+        font-size: 1.0rem;
+        line-height: 1.0;
+    }
+    #edu h4 {
+        padding-left: 254px;
+        font-size: 22px;
+        MARGIN-LEFT: -22px;
+    }
+    #edu h5 a {
+        padding-right: 255px;
+        font-size: 14px;
+    }
+    #track h5 a {
+        font-size: 14px;
+        padding-right: 245px;
+    }
+    #track h4 {
+        font-size: 22px;
+        padding-left: 174px;
+    }
+    #edu h5 a {
+        padding-right: 255px;
+        font-size: 14px;
+    }
+    #edutrack {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    small {
+        margin-right: 80px;
+    }
+    footer img {
+        height: 100px;
+        width: 200px;
+        margin-right: 2px;
+        float: right;
+    }
+    #profileimg img {
+        margin-top: -75px;
+        height: 100px;
+        width: 100px;
+    }
+    .profile img {
+        height: 100px;
+        width: 100px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .profile img:hover {
+        background-color: #ffffff;
+        border-radius: 15px;
+    }
+    #icon {
+        margin-top: 45px;
+        float: right;
+        margin-right: -27px;
+        font-size: 16px;
+    }
+}
+
+
+/*xlarge screen*/
+
+@media (min-width:1200px) {
+    #study {
+        height: 600px;
+        width: 600px;
+        max-height: 100%;
+        max-width: 70%;
+    }
+    .lead {
+        font-size: 30px;
+        font-weight: 300;
+        margin-right: 138px;
+    }
+    .grad {
+        width: 1000px;
+        margin-right: 150px;
+        margin-left: 250px;
+    }
+    footer .grad {
+        margin-right: 130px;
+        margin-left: 60px;
+    }
+    #slider h4 {
+        padding-left: 900px;
+    }
+    #slider .seeall {
+        margin-left: 1px;
+        margin-top: -28px;
+        padding-left: 5px;
+        padding-right: 1061px;
+        display: block;
+        font-size: 18px;
+    }
+    .btn {
+        padding: 0.375rem 0.75rem;
+        font-size: 1.0rem;
+        line-height: 1.0;
+    }
+    #edutrack {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    #track h5 a {
+        font-size: 14px;
+        padding-right: 325px;
+    }
+    #track h4 {
+        font-size: 20px;
+        padding-left: 282px;
+    }
+    #edu h5 a {
+        font-size: 14px;
+        padding-right: 335px;
+    }
+    #edu h4 {
+        font-size: 20px;
+        padding-left: 292px;
+    }
+    #profileimg img {
+        margin-top: -45px;
+        height: 80px;
+        width: 80px;
+    }
+    .profile img {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+    #icon {
+        margin-top: 50px;
+        float: right;
+        margin-right: -27px;
+        font-size: 16px;
+    }
+}

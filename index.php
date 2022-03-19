@@ -1,146 +1,85 @@
-<?php
-// Start session 
-session_start();
-
-// Get data from session 
-$sessData = !empty($_SESSION['sessData']) ? $_SESSION['sessData'] : '';
-
-// Get status from session 
-if (!empty($sessData['status']['msg'])) {
-    $statusMsg = $sessData['status']['msg'];
-    $status = $sessData['status']['type'];
-    unset($_SESSION['sessData']['status']);
-}
-
-// Include and initialize DB class 
-require_once 'DB.class.php';
-$db = new DB();
-
-// Fetch the users data 
-$users = $db->getRows('users', array('order_by' => 'id DESC'));
-                // Fetch the users data 
-$posts = $db->getRows('posters', array('order_by' => 'P_id DESC'));
-
-// Retrieve status message from session 
-if (!empty($_SESSION['statusMsg'])) {
-    echo '<p>' . $_SESSION['statusMsg'] . '</p>';
-    unset($_SESSION['statusMsg']);
-}
-?>
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<title>Enas Blog</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                        Enas Blog
+                    </a>
+                </div>
+            </nav>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.php">Dashboard</a>
+                    </li>
 
-    <div class="row">
-        <div class="col-md-12 head">
-            <h5>Users</h5>
-            <!-- Add link -->
-            <div class="float-right">
-                <a href="add.php" class="btn btn-success"><i class="plus"></i> New User</a>
+                </ul>
             </div>
         </div>
+    </nav>
+    <h1 class="text-center">Posts</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">department</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">share post</a>
 
-        <!-- Status message -->
-        <?php if (!empty($statusMsg)) { ?>
-            <div class="alert alert-<?php echo $status; ?>"><?php echo $statusMsg; ?></div>
-        <?php } ?>
-
-        <!-- List the users -->
-        <table class="table table-striped table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Created</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if (!empty($users)) {
-                    $i = 0;
-                    foreach ($users as $row) {
-                        $i++; ?>
-                        <tr>
-                            <td><?php echo $i; ?></td>
-                            <td><?php echo $row['name']; ?></td>
-                            <td><?php echo $row['email']; ?></td>
-                            <td><?php echo $row['phone']; ?></td>
-                            <td><?php echo $row['created']; ?></td>
-                            <td>
-                                <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">edit</a>
-                                <a href="action.php?action_type=delete&id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete data?');">delete</a>
-                            </td>
-                        </tr>
-                    <?php }
-                } else { ?>
-                    <tr>
-                        <td colspan="5">No user(s) found...</td>
-                    </tr>
-                <?php }  ?>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- add posts section -->
-    <div class="row">
-        <div class="col-md-12 head">
-            <h5>Posts</h5>
-            <!-- Add link -->
-            <div class="float-right">
-                <a href="add.php" class="btn btn-success"><i class="plus"></i> New Post</a>
+                    </div>
+                </div>
             </div>
+
         </div>
-
-        <!-- Status message -->
-        <?php if (!empty($statusMsg)) { ?>
-            <div class="alert alert-<?php echo $status; ?>"><?php echo $statusMsg; ?></div>
-        <?php } ?>
-
-        <!-- List the posts -->
-        <table class="table table-striped table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                    <th>#</th>
-                    <th>Department</th>
-                    <th>Subject</th>
-                    <th>Post</th>
-                    <th>Created</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if (!empty($posts)) {
-                    $i = 0;
-                    foreach ($posts as $row) {
-                        $i++; ?>
-                        <tr>
-                            <td><?php echo $i; ?></td>
-                            <td><?php echo $row['department']; ?></td>
-                            <td><?php echo $row['subject']; ?></td>
-                            <td><?php echo $row['Post']; ?></td>
-                            <td><?php echo $row['created']; ?></td>
-                            <td>
-                                <a href="edit.php?p_id=<?php echo $row['p_id']; ?>" class="btn btn-warning">edit</a>
-                                <a href="action.php?action_type=delete&p_id=<?php echo $row['p_id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete data?');">delete</a>
-                            </td>
-                        </tr>
-                    <?php }
-                } else { ?>
-                    <tr>
-                        <td colspan="5">No post(s) found...</td>
-                    </tr>
-                <?php }  ?>
-            </tbody>
-        </table>
     </div>
+    <br>
+    <footer>
+        <div class="copy-right ">
+            <p>
+                Copyright <i class="fa fa-copyright " aria-hidden="true "></i>2022.All Rghits Resorved to EnasBlog.
+            </p>
+        </div>
+        <div class="social ">
+            <a href="https://www.facebook.com/enas.alqaadi "> <i class="fa fa-facebook-f "> </i></a>
+            <a href="https://www.instagram.com/enasalqaadi/ "> <i class="fa fa-instagram "></i> </a>
+            <a href="https://github.com/EnasHameedQ "> <i class="fa fa-github "> </i></a>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

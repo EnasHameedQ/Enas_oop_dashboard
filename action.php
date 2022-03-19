@@ -11,7 +11,7 @@ $tblName = 'users';
 
 $sendData = $statusMsg = $valErr = '';
 $status = 'danger';
-$redirectURL = 'index.php';
+$redirectURL = 'dashboard.php';
 
 // If Add request is submitted 
 if (!empty($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'add') {
@@ -49,7 +49,7 @@ if (!empty($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'add') {
             $statusMsg = 'User data has been added successfully!';
             $sendData = '';
 
-            $redirectURL = 'index.php';
+            $redirectURL = 'dashboard.php';
         } else {
             $statusMsg = 'Something went wrong, please try again after some time.';
         }
@@ -112,7 +112,7 @@ if (!empty($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'add') {
             $statusMsg = $tblName. 'data has been updated successfully!';
             $sendData = '';
 
-            $redirectURL = 'index.php';
+            $redirectURL = 'dashboard.php';
         } else {
             $statusMsg = 'Something went wrong, please try again after some time.';
         }
